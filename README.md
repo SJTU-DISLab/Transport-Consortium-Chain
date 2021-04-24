@@ -68,9 +68,10 @@ cat log/* |grep Report 操作，可以看到，两个服务器的hash值相同�
 2. 修改/benchmarks/caliper-benchmarks/networks/fisco-bcos/4nodes1group/fisco-bcos.json文件:
 
 (1).删除"command"内容:    "command": {
+
                          }
                           
-(2)根据实际ip号,rpcport,channelPort修改对应节点内容
+(2)根据实际ip号,rpcport,channelPort修改对应节点
 
 (3)修改智能合约第一项为:         "smartContracts": [
 
