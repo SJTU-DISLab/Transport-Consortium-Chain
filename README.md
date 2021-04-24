@@ -28,7 +28,7 @@
  <img width="520" alt="图片" src="https://user-images.githubusercontent.com/56347756/115842311-46f91500-a450-11eb-8890-9e724559ea20.png">
  
 7. 修改tpl/group.i.genesis文件
-   将consensus_type=pbft的pbft修改为hotstuff
+   将consensus_type=pbft的pbft修改为rpbft
    
 此后操作针对一台服务器部署
 
@@ -61,6 +61,32 @@ tail -f log/log* | grep connected
 16. 在服务器1和2上，分别进入node/node_xxx.xxx.xxx文件夹下，执行
 cat log/* |grep Report 操作，可以看到，两个服务器的hash值相同，说明是同一条链，链的长度等参数也可以看到.
 17. 在该文件夹下，执行 tail -f log/*  ，得到节点共识信息,+++++++++++，说明我们两个服务器的节点建立了共识,可以查看到更新后的共识算法.
+# 性能测试
+本测试用于单机测试
 
-  
+1. 节点运行后,将节点生成的sdk文件替换/benchmarks/caliper-benchmarks/networks/fisco-bcos/4nodes1group/下的sdk文件;
+2. 修改/benchmarks/caliper-benchmarks/networks/fisco-bcos/4nodes1group/fisco-bcos.json文件:
+
+(1).删除"command"内容:    "command": {
+
+                          }
+                          
+(2)根据实际ip号,rpcport,channelPort修改对应节点内容
+
+(3)修改智能合约第一项为:         "smartContracts": [
+
+            {
+            
+                "id": "helloworld",
+                
+                "address": "0x0000000000000000000000000000000000005001",
+                
+                "language": "precompiled",
+                
+                "version": "v0"
+                
+            },
+
+
+
   
