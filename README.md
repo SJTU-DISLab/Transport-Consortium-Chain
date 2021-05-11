@@ -28,7 +28,7 @@
  <img width="520" alt="图片" src="https://user-images.githubusercontent.com/56347756/115842311-46f91500-a450-11eb-8890-9e724559ea20.png">
  
 7. 修改tpl/group.i.genesis文件
-   将consensus_type=pbft的pbft修改为rpbft
+   将consensus_type=pbft的pbft修改为tcc
    
 此后操作针对一台服务器部署
 
