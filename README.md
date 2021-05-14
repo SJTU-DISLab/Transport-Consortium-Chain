@@ -23,8 +23,11 @@
   bash ./scripts/install.sh
 4. 检查是否安装成功,若成功，输出 usage: generator xxx
   ./generator -h
-5. 将右侧的release发行版二进制文件放入meta文件夹下
-6. 到此，fisco下载安装完毕，此时generator文件夹如下：
+5. 将右侧的release发行版二进制文件放入meta文件夹下, 执行指令: 
+
+  chmod +x fisco-bcos
+  
+7. 到此，fisco下载安装完毕，此时generator文件夹如下：
  <img width="520" alt="图片" src="https://user-images.githubusercontent.com/56347756/115842311-46f91500-a450-11eb-8890-9e724559ea20.png">
  
 7. 修改tpl/group.i.genesis文件
