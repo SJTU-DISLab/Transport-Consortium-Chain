@@ -60,7 +60,7 @@ tail -f log/log* | grep connected
 15. 切入到服务器2的node文件夹，使用./start_all.sh 建立联系
 16. 在服务器1和2上，分别进入node/node_xxx.xxx.xxx文件夹下，执行
 cat log/* |grep Report 操作，可以看到，两个服务器的hash值相同，说明是同一条链，链的长度等参数也可以看到.
-17. 在该文件夹下，执行 tail -f log/*  ，得到节点共识信息,+++++++++++，说明我们两个服务器的节点建立了共识,可以查看到更新后的共识算法.
+
 # 性能测试
 本测试用于单机测试
 
@@ -81,7 +81,9 @@ cat log/* |grep Report 操作，可以看到，两个服务器的hash值相同�
                 "language": "precompiled",
                 "version": "v0"  
             },
-
-
+            
+3.修改benchmarks/caliper-benchmarks/benchmarks/samples/fisco-bcos/helloworld/config.yaml文件: 
+  
+  将txnumber调整到20000, tps调整为20000, interval调整为0.05
 
   
