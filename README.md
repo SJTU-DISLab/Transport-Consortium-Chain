@@ -18,6 +18,7 @@
 # 交通联盟链两服务器部署过程
 1. 本次部署服务器1外网地址为101.132.114.148，服务器2外网地址为120.78.95.105.
 2. 对服务器1和2都执行以下操作，以下载fisco
+
   git clone https://github.com/FISCO-BCOS/generator.git && cd ./generator
 3. 执行下面操作，以安装fisco
   bash ./scripts/install.sh
